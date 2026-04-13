@@ -6,6 +6,7 @@ load_dotenv()
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 SAMPLE_RATE = 24000
+SILENCE_DURATION = 300
 WS_URL = "wss://api.openai.com/v1/realtime"
 
 SESSION_CONFIG = {
@@ -34,7 +35,7 @@ SESSION_CONFIG = {
                 "type": "server_vad",
                 "threshold": 0.8,
                 "prefix_padding_ms": 300,
-                "silence_duration_ms": 300,
+                "silence_duration_ms": SILENCE_DURATION,
             },
         },
     },

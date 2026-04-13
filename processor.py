@@ -4,6 +4,7 @@ from collections import deque
 
 from models import OutboundMessage
 from time_utils import fmt_ts, ms_between, now_ts
+from config import SILENCE_DURATION
 
 
 class TranscriptProcessor:
@@ -17,7 +18,7 @@ class TranscriptProcessor:
         self.previous_item_id = None
         self.expected_ids = deque()
         self.pending_transcripts = {}
-        self.silence_duration = 300
+        self.silence_duration = SILENCE_DURATION
 
         # timestamps / metrics per item_id
         self.item_created_at = {}
