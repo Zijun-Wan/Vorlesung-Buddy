@@ -1,0 +1,5 @@
+python-dotenv
+requests
+websocket-client
+sounddevice
+soundfile

@@ -1,0 +1,8 @@
+openai-log.txt
+
+.env
+
+*.mp3
+*.wav
+
+try.*
